@@ -94,7 +94,7 @@ if in3 == 'y':
 		palist = []
 		inlist = []
 		mmap = eval(str(mapl[k]))	#magnification map
-		os.remove(str(mapl[k])+'_val.dat')	
+#		os.remove(str(mapl[k])+'_val.dat')	
 		res = open(str(mapl[k])+'_val.dat',"a")
 		res.write('size'+','+'inc'+','+'pa'+','+'dt_med'+','+'dt_dev'+','+'dt_lamp'+','+'dtinc_med'+','+'dtinc_dev'+','+'dtlamp_med'+','+'dtlamp_dev'+'\n')
 		for i in range(len(size)):
