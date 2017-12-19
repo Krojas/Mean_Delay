@@ -241,6 +241,6 @@ if in5 == 'y':
 		final['D-B (dev)'] = np.sqrt((mapD['dt_dev'])**2 + (mapB['dt_dev'])**2)
 		final['D-C (m)'] = mapD['dt_m'] - mapC['dt_m']
 		final['D-C (dev)'] = np.sqrt((mapD['dt_dev'])**2 + (mapC['dt_dev'])**2)
-final.to_csv('finaltable')
-print('Final Table:')
-print(final)
+	final.to_csv('finaltable')
+	print('Final Table:')
+	print(final)
