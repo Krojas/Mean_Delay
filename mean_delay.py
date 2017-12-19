@@ -96,7 +96,7 @@ if in3 == 'y':
 		mmap = eval(str(mapl[k]))	#magnification map
 #		os.remove(str(mapl[k])+'_val.dat')	
 		res = open(str(mapl[k])+'_val.dat',"a")
-		res.write('size'+','+'inc'+','+'pa'+','+'dt_med'+','+'dt_dev'+','+'dt_lamp'+','+'dtinc_med'+','+'dtinc_dev'+','+'dtlamp_med'+','+'dtlamp_dev'+'\n')
+		res.write('size'+','+'inc'+','+'pa'+','+'dt_m'+','+'dt_dev'+','+'dt_lamp'+','+'dtinc_m'+','+'dtinc_dev'+','+'dtlamp_m'+','+'dtlamp_dev'+'\n')
 		for i in range(len(size)):
 			for j in range(len(posan)):
 				slist.append(size[i])
@@ -222,24 +222,24 @@ if in5 == 'y':
 	if in2 == str(2):
 		mapA = pd.read_csv('mapA_val.dat')
 		mapB = pd.read_csv('mapB_val.dat')
-		final['B-A (med)'] = mapB['dt_med'] - mapA['dt_med']
+		final['B-A (m)'] = mapB['dt_m'] - mapA['dt_m']
 		final['B-A (dev)'] = np.sqrt((mapB['dt_dev'])**2 + (mapA['dt_dev'])**2)
 	else:
 		mapA = pd.read_csv('mapA_val.dat')
 		mapB = pd.read_csv('mapB_val.dat')
 		mapC = pd.read_csv('mapC_val.dat')
 		mapD = pd.read_csv('mapD_val.dat')
-		final['B-A (med)'] = mapB['dt_med'] - mapA['dt_med']
+		final['B-A (m)'] = mapB['dt_m'] - mapA['dt_m']
 		final['B-A (dev)'] = np.sqrt((mapB['dt_dev'])**2 + (mapA['dt_dev'])**2)
-		final['C-A (med)'] = mapC['dt_med'] - mapA['dt_med']
+		final['C-A (m)'] = mapC['dt_m'] - mapA['dt_m']
 		final['C-A (dev)'] = np.sqrt((mapC['dt_dev'])**2 + (mapA['dt_dev'])**2)
-		final['D-A (med)'] = mapD['dt_med'] - mapA['dt_med']
+		final['D-A (m)'] = mapD['dt_m'] - mapA['dt_m']
 		final['D-A (dev)'] = np.sqrt((mapD['dt_dev'])**2 + (mapA['dt_dev'])**2)
-		final['C-B (med)'] = mapC['dt_med'] - mapB['dt_med']
+		final['C-B (m)'] = mapC['dt_m'] - mapB['dt_m']
 		final['C-B (dev)'] = np.sqrt((mapC['dt_dev'])**2 + (mapB['dt_dev'])**2)
-		final['D-B (med)'] = mapD['dt_med'] - mapB['dt_med']
+		final['D-B (m)'] = mapD['dt_m'] - mapB['dt_m']
 		final['D-B (dev)'] = np.sqrt((mapD['dt_dev'])**2 + (mapB['dt_dev'])**2)
-		final['D-C (med)'] = mapD['dt_med'] - mapC['dt_med']
+		final['D-C (m)'] = mapD['dt_m'] - mapC['dt_m']
 		final['D-C (dev)'] = np.sqrt((mapD['dt_dev'])**2 + (mapC['dt_dev'])**2)
 final.to_csv('finaltable')
 print('Final Table:')
