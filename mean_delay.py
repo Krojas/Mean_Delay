@@ -144,7 +144,7 @@ if in3 == 'y':
 #	cumulative distribution		#
 #****************************************
 
-in4 = raw_input('The cumulative plot only work if you already run the delay and choose 3 different sizes for the accretion disk, do you want to skip this part? y/n ')
+in4 = raw_input('The cumulative plot only work if you saved the time delay maps, choose 3 different sizes for the accretion disk, 3 position angle, and one inclination. Do you want skip this part? y/n')
 if in4 == 'n':
 	if in3 == 'n':
 		dtsel0 = np.loadtxt('dtsel')
