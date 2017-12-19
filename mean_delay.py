@@ -144,7 +144,7 @@ if in3 == 'y':
 #	cumulative distribution		#
 #****************************************
 
-in4 = raw_input('The cumulative plot only work if you saved the time delay maps, choose 3 different sizes for the accretion disk, 3 position angle, and one inclination. Do you want skip this part? y/n')
+in4 = raw_input('The cumulative plot only work if you saved the time delay maps, choose 3 different sizes for the accretion disk, 3 position angle, and one inclination. Do you want skip this part? y/n: ')
 if in4 == 'n':
 	if in3 == 'n':
 		dtsel0 = np.loadtxt('dtsel')
@@ -200,6 +200,8 @@ if in4 == 'n':
 	ax12.set_xlabel("dt(x*sin(i) - R) [days]")
 	ax3.set_xlim([-1.5,3.0])
 	ax3.set_xticks([-1.0,-0.5,0.0,0.5,1.0,1.5,2.0,2.5])
+	plt.subplots_adjust(hspace=0.001)
+	plt.subplots_adjust(wspace=0.001)
 	plt.savefig('cumulative.pdf')
 	plt.show()
 
