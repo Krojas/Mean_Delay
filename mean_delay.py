@@ -152,7 +152,7 @@ if in4 == 'n':
 		dtlampsel0 = np.loadtxt('dtlampsel')
 	n = 15
 	bins = np.arange(-10.0,10.0,0.001)
-	ig, ((ax1,ax2,ax3),(ax4,ax5,ax6),(ax7,ax8,ax9),(ax10,ax11,ax12)) = plt.subplots(4,3,sharex='col',sharey=True)
+	ig, ((ax1,ax2,ax3),(ax4,ax5,ax6),(ax7,ax8,ax9),(ax10,ax11,ax12)) = plt.subplots(4,3,sharex='col',sharey=True,figsize=(20, 10))
 	color = ['black','blue','red']
 	ax1.hist([dtincsel0[0],dtincsel0[1],dtincsel0[2]],cumulative='True',bins=bins,histtype='step',normed=1,color=color,linestyle=':')
 	ax1.hist([dtincsel0[3],dtincsel0[4],dtincsel0[5]],cumulative='True',bins=bins,histtype='step',normed=1,color=color,linestyle='-')
